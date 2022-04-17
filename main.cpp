@@ -91,7 +91,44 @@ private:
         root->size = size(root->left) + size(root->right) + 1;
     }
 
+    Node *merge(Node *root_l, Node *root_r) {
+        if (root_l == nullptr) {
+            return root_r;
+        }
+        if (root_r == nullptr) {
+            return root_l;
+        }
 
+        if (root_l->priority < root_r->priority) {
+            root_l->right = merge(root_l->right, root_r);
+            recalculate(root_l);
+            return root_l;
+        } else {
+            root_r->left = merge(root_l, root_r->left);
+            recalculate(root_r);
+            return root_r;
+        }
+
+    }
+
+    std::pair<Node *, Node *> split(Node *root, int k) {
+        if (root == nullptr) {
+            return {nullptr, nullptr};
+        }
+
+        if (root->key < k) {
+            auto[l, r] = split(root->right, k);
+            root->right = l;
+            recalculate(root);
+            return {root, r};
+        } else {
+            auto[l, r] = split(root->left, k);
+            root->left = r;
+            recalculate(root);
+            return {l, root};
+        }
+
+    }
 
 };
 
