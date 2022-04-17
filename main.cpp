@@ -37,6 +37,10 @@ public:
         root = nullptr;
     }
 
+    int size() {
+        return size(root);
+    }
+
 
 
 private:
@@ -51,7 +55,12 @@ private:
         }
     }
 
-
+    int size(Node *root) {
+        if (root == nullptr) {
+            return 0;
+        }
+        return root->size;
+    }
 
 };
 
