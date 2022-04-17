@@ -41,13 +41,29 @@ public:
         return size(root);
     }
 
+    void insert(int k) {
+        root = insert(root, new Node(k));
+    }
+
+    void remove(int k) {
+        root = remove(root, k);
+    }
+
+    bool find(int k) {
+        return find(root, k);
+    }
+
+    int count(int k) {
+        return count(root, k);
+    }
+
 
 
 private:
 
-    Node *root;
+    Node* root;
 
-    void clear(Node *root) {
+    void clear(Node* root) {
         if (root != nullptr) {
             clear(root->left);
             clear(root->right);
@@ -61,6 +77,8 @@ private:
         }
         return root->size;
     }
+
+
 
 };
 
