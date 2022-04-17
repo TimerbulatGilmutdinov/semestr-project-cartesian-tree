@@ -27,10 +27,30 @@ public:
         root = nullptr;
     }
 
+    ~Treap() {
+        clear();
+        root = nullptr;
+    }
+
+    void clear() {
+        clear(root);
+        root = nullptr;
+    }
+
+
 
 private:
 
     Node *root;
+
+    void clear(Node *root) {
+        if (root != nullptr) {
+            clear(root->left);
+            clear(root->right);
+            delete root;
+        }
+    }
+
 
 
 };
