@@ -173,6 +173,33 @@ private:
 
     }
 
+    bool find(Node *root, int k) {
+        if (root == nullptr) {
+            return false;
+        }
+
+        if (root->key == k) {
+            return true;
+        }
+
+        if (k < root->key) {
+            return find(root->left, k);
+        } else {
+            return find(root->right, k);
+        }
+    }
+
+    int count(Node *root, int k) {
+        if (root == nullptr) {
+            return 0;
+        }
+
+        if (root->key >= k) {
+            return count(root->left, k);
+        } else {
+            return count(root->right, k) + 1 + size(root->left);
+        }
+    }
 
 
 };
