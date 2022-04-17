@@ -201,6 +201,22 @@ private:
         }
     }
 
+    int find_by_id(Node *root, int id) {
+        if (root == nullptr) {
+            return std::numeric_limits<int>::min();
+        }
+
+        if (size(root->left) == id) {
+            return root->key;
+        }
+
+        if (size(root->left) > id) {
+            return find_by_id(root->left, id);
+        } else {
+            return find_by_id(root->right, id - size(root->left) - 1);
+        }
+
+    }
 
 };
 
