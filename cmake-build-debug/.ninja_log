@@ -1,0 +1,8 @@
+# ninja log v5
+7	1776	6719103753615674	CMakeFiles/cartesianTree.dir/main.cpp.obj	e6eb98886d210afd
+1777	1963	6719103755516105	cartesianTree.exe	feb71c1090acfd68
+7	447	6719105358456687	build.ninja	44ad14f20e8d7a51
+9	161	6719106914347135	CMakeFiles/cartesianTree.dir/Node.cpp.obj	d5205865c69e4037
+163	387	6719106916607650	cartesianTree.exe	46ea37d231c09dbe
+8	108	6719107676650502	CMakeFiles/cartesianTree.dir/Node.cpp.obj	d5205865c69e4037
+109	305	6719107678560926	cartesianTree.exe	46ea37d231c09dbe
