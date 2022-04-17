@@ -84,6 +84,15 @@ private:
         return root->size;
     }
 
+    void recalculate(Node *root) {
+        if (root == nullptr) {
+            return;
+        }
+        root->size = size(root->left) + size(root->right) + 1;
+    }
+
+
+
 };
 
 
