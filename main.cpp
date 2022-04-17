@@ -63,7 +63,9 @@ public:
         }
         return res;
     }
-
+    void preorder() {
+        preorder_help(root);
+    }
 
 private:
 
@@ -217,6 +219,14 @@ private:
         }
 
     }
+    void preorder_help(Node *root) {
+        if (root != nullptr) {
+            std::cout << root->key <<" ";
+            preorder_help(root->left);
+            preorder_help(root->right);
+        }
+    }
+
 
 };
 
