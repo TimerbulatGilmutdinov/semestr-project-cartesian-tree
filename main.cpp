@@ -19,6 +19,21 @@ struct Node {
         size = 1;
     }
 };
+struct Treap {
+
+public:
+
+    Treap() {
+        root = nullptr;
+    }
+
+
+private:
+
+    Node *root;
+
+
+};
 
 
 

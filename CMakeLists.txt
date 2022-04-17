@@ -3,4 +3,4 @@ project(cartesianTree)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cartesianTree main.cpp Node.cpp Node.hpp)
+add_executable(cartesianTree main.cpp)
