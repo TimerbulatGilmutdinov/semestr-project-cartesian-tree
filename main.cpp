@@ -130,6 +130,51 @@ private:
 
     }
 
+    Node *insert(Node *root, Node *v) {
+        if (root == nullptr) {
+            return v;
+        }
+
+        if (v->priority < root->priority) {
+            auto[l, r] = split(root, v->key);
+            v->left = l;
+            v->right = r;
+            recalculate(v);
+            return v;
+        }
+
+        if (v->key < root->key) {
+            root->left = insert(root->left, v);
+        } else {
+            root->right = insert(root->right, v);
+        }
+        recalculate(root);
+        return root;
+
+    }
+
+    Node *remove(Node *root, int k) {
+        if (root == nullptr) {
+            return nullptr;
+        }
+
+        if (root->key == k) {
+            return merge(root->left, root->right);
+        }
+
+        if (k < root->key) {
+            root->left = remove(root->left, k);
+        } else {
+            root->right = remove(root->right, k);
+        }
+
+        recalculate(root);
+        return root;
+
+    }
+
+
+
 };
 
 
