@@ -56,7 +56,13 @@ public:
     int count(int k) {
         return count(root, k);
     }
-
+    int find_by_id(int id) {
+        int res = find_by_id(root, id);
+        if (res == std::numeric_limits<int>::min()) {
+            throw std::invalid_argument("There is no element with such id");
+        }
+        return res;
+    }
 
 
 private:
@@ -77,8 +83,6 @@ private:
         }
         return root->size;
     }
-
-
 
 };
 
