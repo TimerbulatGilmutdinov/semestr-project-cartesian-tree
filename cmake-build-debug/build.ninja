@@ -67,8 +67,8 @@ build CMakeFiles/cartesianTree.dir/main.cpp.obj: CXX_COMPILER__cartesianTree_Deb
   OBJECT_DIR = CMakeFiles\cartesianTree.dir
   OBJECT_FILE_DIR = CMakeFiles\cartesianTree.dir
 
-build CMakeFiles/cartesianTree.dir/Node.cpp.obj: CXX_COMPILER__cartesianTree_Debug C$:/Users/timer/CLionProjects/semestr-project-cartesian-tree/Node.cpp || cmake_object_order_depends_target_cartesianTree
-  DEP_FILE = CMakeFiles\cartesianTree.dir\Node.cpp.obj.d
+build CMakeFiles/cartesianTree.dir/treap.cpp.obj: CXX_COMPILER__cartesianTree_Debug C$:/Users/timer/CLionProjects/semestr-project-cartesian-tree/treap.cpp || cmake_object_order_depends_target_cartesianTree
+  DEP_FILE = CMakeFiles\cartesianTree.dir\treap.cpp.obj.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\cartesianTree.dir
   OBJECT_FILE_DIR = CMakeFiles\cartesianTree.dir
@@ -81,7 +81,7 @@ build CMakeFiles/cartesianTree.dir/Node.cpp.obj: CXX_COMPILER__cartesianTree_Deb
 #############################################
 # Link the executable cartesianTree.exe
 
-build cartesianTree.exe: CXX_EXECUTABLE_LINKER__cartesianTree_Debug CMakeFiles/cartesianTree.dir/main.cpp.obj CMakeFiles/cartesianTree.dir/Node.cpp.obj
+build cartesianTree.exe: CXX_EXECUTABLE_LINKER__cartesianTree_Debug CMakeFiles/cartesianTree.dir/main.cpp.obj CMakeFiles/cartesianTree.dir/treap.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\cartesianTree.dir
